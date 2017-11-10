@@ -15,19 +15,35 @@ Plugin 'gmarik/Vundle.vim'
 " Plugins
 Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdtree'
-"Plugin 'SirVer/ultisnips'
-"Plugin 'honza/vim-snippets'
 Plugin 'kien/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-sleuth'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-scripts/a.vim'
+Plugin 'rking/ag.vim'
+Plugin 'gnattishness/cscope_maps'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+Plugin 'Shougo/neocomplete'
+Plugin 'Shougo/neosnippet'
+Plugin 'Shougo/neosnippet-snippets'
 
 " All plugins must be listed here
 call vundle#end()
 filetype plugin indent on
 filetype plugin on
+
+
+" Trigger configuration. 
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+
+
 
 " Colors
 syntax enable           " enable syntax processing
