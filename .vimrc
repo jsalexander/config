@@ -28,6 +28,7 @@ Plugin 'honza/vim-snippets'
 Plugin 'Shougo/neocomplete'
 Plugin 'Shougo/neosnippet'
 Plugin 'Shougo/neosnippet-snippets'
+"Plugin 'Valloric/YouCompleteMe'
 
 " All plugins must be listed here
 call vundle#end()
@@ -143,6 +144,7 @@ let g:ycm_global_ycm_extra_config='~/.ycm_extra_conf.py'
 
 " NERDTree
 let g:NERDTreeWinSize=40
+let g:NERDTreeShowHidden=1
 
 " Custom Environment
 "autocmd VimEnter * TagbarToggle
