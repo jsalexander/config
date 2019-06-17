@@ -25,10 +25,10 @@ Plugin 'rking/ag.vim'
 Plugin 'gnattishness/cscope_maps'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
-Plugin 'Shougo/neocomplete'
-Plugin 'Shougo/neosnippet'
-Plugin 'Shougo/neosnippet-snippets'
-"Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Shougo/neocomplete'
+"Plugin 'Shougo/neosnippet'
+"Plugin 'Shougo/neosnippet-snippets'
+Plugin 'Valloric/YouCompleteMe'
 
 " All plugins must be listed here
 call vundle#end()
@@ -44,6 +44,10 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
 
+" A.vim configuration
+"let g:alternateSearchPath = '../inc,./inc,../source,sfr,../src,../include,..'
+let g:alternateExtensions_C = "h,inc,H,HPP,hpp"
+let g:alternateExtensions_h = "C,cpp,c++,CPP,m"
 
 
 " Colors
@@ -62,7 +66,8 @@ set tabstop=4           " 4 space tab
 set expandtab           " use spaces for tabs
 set softtabstop=4       " 4 space tab
 set shiftwidth=4
-set modelines=1
+set modelines=0
+set nomodeline
 filetype indent on
 filetype plugin on
 set autoindent

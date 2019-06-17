@@ -11,8 +11,10 @@ echo "[+] Done!"
 echo "[+] Generating file list..."
 
 find $PROJ                                          \
+    -path "$PROJ/.flux/*" -prune -o                 \
     -path "$PROJ/bin/*" -prune -o                   \
     -path "$PROJ/build/*" -prune -o                 \
+    -path "$PROJ/cache/*" -prune -o                 \
     -path "$PROJ/doc/*" -prune -o                   \
     -path "$PROJ/docs/*" -prune -o                  \
     -path "$PROJ/export/*" -prune -o                \
@@ -29,5 +31,16 @@ cscope -b -q -k
 echo "[+] Done!"
 
 echo "[+] Generating ctags database..."
-ctags -R .
+ctags -R                                            \
+    --exclude=".flux"                               \
+    --exclude="bin"                                 \
+    --exclude="build"                               \
+    --exclude="cache"                               \
+    --exclude="doc"                                 \
+    --exclude="docs"                                \
+    --exclude="export"                              \
+    --exclude="external"                            \
+    --exclude="inc"                                 \
+    .
+
 echo "[+] Done!"
