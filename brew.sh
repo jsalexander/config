@@ -55,7 +55,6 @@ brew install ssh-copy-id
 brew install tree
 brew install vbindiff
 brew install p7zip
-brew install macvim
 brew install openvpn
 
 brew install go
