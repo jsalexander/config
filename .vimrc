@@ -28,7 +28,7 @@ Plugin 'honza/vim-snippets'
 "Plugin 'Shougo/neocomplete'
 "Plugin 'Shougo/neosnippet'
 "Plugin 'Shougo/neosnippet-snippets'
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
 
 " All plugins must be listed here
 call vundle#end()
