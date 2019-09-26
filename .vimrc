@@ -57,6 +57,9 @@ let g:gruvbox_bold=0
 let g:gruvbox_contrast_dark="hard"
 colorscheme gruvbox
 
+" Transparency
+hi Normal guibg=NONE ctermbg=NONE
+
 " Misc
 set ttyfast             " faster redraw
 set backspace=indent,eol,start
