@@ -1,7 +1,8 @@
 #!/bin/sh
 
 usage() {
-    echo "$0 - Downloads all repos from a specified user"
+    echo
+    echo "$0 - Downloads all github repos from a specified user, e.g. jsalexander"
     echo
     echo "    Usage: $0 user"
     echo
