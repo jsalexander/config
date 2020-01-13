@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-rm -rf ~/.vimrc
+rm -rf ~/.vim
+cp -rf .vim ~/
 cp -rf .vimrc ~/
 cp -rf .tmux.conf ~/
 
