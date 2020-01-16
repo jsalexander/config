@@ -15,9 +15,6 @@ brew install cscope
 brew install the_silver_searcher
 #brew install wget
 
-brew install vim --with-override-system-vi
-brew install tmux
-
 #brew install aircrack-ng
 #brew install bfg
 brew install binutils
@@ -50,6 +47,8 @@ brew install tree
 brew install p7zip
 brew install openvpn
 
+brew install vim
+brew install tmux
 brew install cmake
 brew install ninja
 brew install llvm
