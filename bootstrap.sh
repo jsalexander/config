@@ -1,7 +1,7 @@
 OS_NAME=$(uname)
 
 # Clean-up any existing environment
-#rm -rf ~/.vim
+rm -rf ~/.vim
 
 # Install software from OS-specific package manager
 if [ $OS_NAME = "Darwin" ] 
