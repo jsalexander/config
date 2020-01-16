@@ -53,7 +53,7 @@ brew install cmake
 brew install ninja
 brew install llvm
 brew install go
-brew install java
+brew install openjdk
 brew install ant
 brew install ivy
 brew install gradle
