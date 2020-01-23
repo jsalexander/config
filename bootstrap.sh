@@ -26,9 +26,9 @@ fi
 
 # Setup vim
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-vim -c "PluginInstall" +qall
 cp -rf .vim ~/
 cp -rf .vimrc ~/
+vim -c "PluginInstall" +qall
 
 # Setup tmux
 cp -rf .tmux.conf ~/
