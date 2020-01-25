@@ -33,6 +33,9 @@ vim -c "PluginInstall" +qall
 # Setup tmux
 cp -rf .tmux.conf ~/
 
+# Setup gdb
+cp -rf .gdbinit ~/
+
 # Intall pip for all python
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 python2 get-pip.py --user
