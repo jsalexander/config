@@ -49,6 +49,7 @@ brew install openvpn
 
 brew install vim
 brew install tmux
+brew install gdb
 brew install cmake
 brew install ninja
 brew install llvm
