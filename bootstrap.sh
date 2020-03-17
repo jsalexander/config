@@ -4,10 +4,10 @@ OS_NAME=$(uname)
 rm -rf ~/.vim
 
 # Install software from OS-specific package manager
-if [ $OS_NAME = "Darwin" ] 
+if [ $OS_NAME = "Darwin" ]
     then
         echo "[+] Bootstrapping macOS"
-        source "os/macos.sh"
+        source "os/osx.sh"
 elif [ $OS_NAME = "OpenBSD" ]
     then
         echo "[+] Bootstrapping OpenBSD"
