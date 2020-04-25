@@ -3,6 +3,7 @@
 # Requirements:
 #     macOS: cmake, vundle, vim (homebrew), python3 (homebrew)
 
+echo "[+] Setting up YouCompleteMe"
 cd ~/.vim/bundle
 git clone https://github.com/Valloric/YouCompleteMe.git
 cd YouCompleteMe

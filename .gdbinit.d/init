@@ -1,0 +1,28 @@
+set breakpoint pending on
+set history filename ~/.gdb_history
+
+set confirm off
+
+dashboard -style style_selected_1 "1;31"
+dashboard -layout registers assembly memory stack source
+dashboard source -style height 45
+dashboard assembly -style opcodes True
+dashboard assembly -style height 10
+
+dashboard expression
+dashboard expression watch fesStatus
+dashboard expression watch $rax
+dashboard expression watch $r0
+
+set output-radix 16
+set disassembly-flavor intel
+
+# Required for macOS
+set startup-with-shell off
+
+python
+import sys
+import os
+cwd = os.path.expanduser ( "~/.gdbinit.d" )
+sys.path.insert(0, cwd )
+end
