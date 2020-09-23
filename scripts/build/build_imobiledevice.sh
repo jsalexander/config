@@ -17,14 +17,22 @@ mkdir $SYSTEMD_DIR
 mkdir $UDEV_DIR
 
 # install dependencies
-sudo apt-get install git gcc g++ make m4 automake autoconf libtool libzip-dev libfuse-dev libusb-dev libusb-1.0.0-dev libssl-dev pkg-config cython doxygen
+sudo apt-get install git gcc g++ make m4 automake autoconf libtool libtool-bin libzip-dev libfuse-dev libusb-dev libusb-1.0.0-dev libssl-dev pkg-config cython doxygen build-essential checkinstall
 
 # create build directory
-mkdir build 
+mkdir build
 cd build
 
-# build libplist
+# clone repos
 git clone https://github.com/libimobiledevice/libplist.git
+git clone https://github.com/libimobiledevice/libusbmuxd.git
+git clone https://github.com/libimobiledevice/usbmuxd.git
+git clone https://github.com/libimobiledevice/libimobiledevice.git
+git clone https://github.com/libimobiledevice/ideviceinstaller.git
+git clone https://github.com/libimobiledevice/idevicerestore.git
+git clone https://github.com/libimobiledevice/ifuse.git
+
+# build libplist
 cd libplist
 git pull
 make clean
@@ -38,7 +46,6 @@ cp tools/.libs/* $BIN_DIR/
 cd ..
 
 # build libusbmuxd
-git clone https://github.com/libimobiledevice/libusbmuxd.git
 cd libusbmuxd
 git pull
 make clean
@@ -51,7 +58,6 @@ cp src/.libs/*.so* $LIB_DIR/
 cd ..
 
 # build usbmuxd
-git clone https://github.com/libimobiledevice/usbmuxd.git
 cd usbmuxd
 git pull
 make clean
@@ -65,7 +71,6 @@ cp udev/*.rules $UDEV_DIR/
 cd ..
 
 # build libimobiledevice
-git clone https://github.com/libimobiledevice/libimobiledevice.git
 cd libimobiledevice
 git pull
 make clean
@@ -79,16 +84,15 @@ cp tools/.libs/* $BIN_DIR/
 cd ..
 
 # build ideviceinstaller
-git clone https://github.com/libimobiledevice/ideviceinstaller.git
 cd ideviceinstaller
 git pull
 make clean
+./autogen.sh
 sudo make install
 cp src/ideviceinstaller $BIN_DIR/
 cd ..
 
 # build idevicerestore
-#git clone https://github.com/libimobiledevice/idevicerestore.git
 #cd idevicerestore
 #git pull
 #make clean
@@ -99,7 +103,6 @@ cd ..
 #cd ..
 
 # build ifuse
-#git clone https://github.com/libimobiledevice/ifuse.git
 #cd ifuse
 #git pull
 #make clean
