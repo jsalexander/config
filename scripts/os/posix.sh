@@ -4,7 +4,7 @@ OS_NAME=$(uname)
 if [ $OS_NAME = "Darwin" ]
     then
         echo "[+] Installing macOS dependencies"
-        source "osx.sh"
+        source "macos.sh"
 elif [ $OS_NAME = "OpenBSD" ]
     then
         echo "[+] Installing OpenBSD dependencies"

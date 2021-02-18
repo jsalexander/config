@@ -17,6 +17,6 @@ echo "[+] Setting up tmuxinator"
 cp -rf ../../.tmuxinator ~/
 
 # Setup gdb
-echo "[+] Setting up gdb"
-cp -rf ../../.gdbinit ~/
-cp -rf ../../.gdbinit.d ~/
+#echo "[+] Setting up gdb"
+#cp -rf ../../.gdbinit ~/
+#cp -rf ../../.gdbinit.d ~/

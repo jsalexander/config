@@ -66,7 +66,7 @@ brew cask install wireshark
 echo "[+] Installing static analysis utilities"
 brew install binutils
 #brew install binwalk
-brew install vbindiff
+#brew install vbindiff
 #brew install xpdf
 #brew install pngcheck
 
@@ -78,34 +78,35 @@ echo "[+] Installing development utilities"
 brew install vim
 brew install tmux
 brew install tmuxinator
-brew install gdb
-brew install cmake
-brew install ninja
-brew install llvm
-brew install go
-brew install openjdk
-brew install ant
-brew install ivy
-brew install gradle
-brew install python2
+#brew install gdb
+#brew install cmake
+#brew install ninja
+#brew install llvm
+#brew install go
+#brew install openjdk
+#brew install ant
+#brew install ivy
+#brew install gradle
+#brew install python2
 brew install python3
 #brew install bfg
 
 #echo "[+] Installing software packages"
-#brew cask install google-chrome
-#brew cask install iterm2
+#brew install --cask google-chrome
+brew install --cask iterm2
+brew install --cask brave-browser
 
 echo "[+] Installing system packages"
-brew cask install osxfuse
+#brew install --cask osxfuse
 
 echo "[+] Installing Android platform tools"
-brew cask install android-platform-tools
+brew install --cask android-platform-tools
 
 echo "[+] Installing iOS tools"
 brew install --HEAD usbmuxd
 brew install --HEAD libimobiledevice
 brew install --HEAD ideviceinstaller
-brew install --HEAD ifuse
+#brew install --HEAD ifuse
 
 echo "[+] Cleaning up Homebrew"
 brew cleanup
